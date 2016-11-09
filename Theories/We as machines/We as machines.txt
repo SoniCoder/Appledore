@@ -1,0 +1,14 @@
+Humans - Machines
+
+Got I/O
+
+Emotions aren't I/O, although they can be expressed through O
+
+Processing
+
+Hardware for processing different sorts of memory data
+1. Image Processing Unit
+
+Memory
+-> Visual (Images)
+-> Audio (Sounds)

@@ -1,0 +1,3 @@
+https://www.hackerrank.com/challenges/bitset-1?h_r=next-challenge&h_v=zen
+
+Solve it efficiently

@@ -1,0 +1,19 @@
+Cu = (1.5 to 2.0 ) Ct 
+Cj = 3.46 Ct 
+Cy = 0.75 Cu
+
+Kz = Cu . A 
+Kx = Ct . A 
+Kj = Cj . I 
+Ky = Cy . Jz 
+A = a . b
+I = ba^3/12
+Jz = ab(a^2 + b^2)/12
+
+Cu = 4 pi^2 f^2 m / A
+f is resonant frequency
+Cu1 = Cusqrt(A/A1)
+
+G = E/2(1+e)
+e is poisson's ratio
+Cu = 1.13E/(1-e^2)sqrt(A)

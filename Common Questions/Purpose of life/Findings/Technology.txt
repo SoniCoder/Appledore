@@ -1,0 +1,5 @@
+Direction -> New Technology
+
+Reason -> Our reward system is designed to reward curiousity, knowing new stuff.
+
+Since memory space is limited and fragile, the technology needs to be stored in some language for later use.

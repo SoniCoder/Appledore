@@ -1,0 +1,13 @@
+Sr - Sum of errors squared
+Sr = Sig(yi - a0 - a1xi)^2
+
+Assuming y = a0 + a1x
+
+dSr/da0 = 0
+dSr/da1 = 0
+
+Gives:
+a1 = (nSig(xy) - sig(x)sig(y))/(nsig(x^2)-sig(x)^2)
+
+s<y/x> = sqrt(Sr/(n-2))
+where s<y/x> is the standard error of the estimate

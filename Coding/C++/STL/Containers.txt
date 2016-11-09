@@ -1,0 +1,38 @@
+Common interface for containers
+size(), Copy Constructor, clear(), swap(cont)
+
+I. Sequence
+
+ 1. vector - Grows in single direction
+ Methods:
+ size()
+ push_back()
+ 
+ 2. deque (Like a Deck) - Grows in both directions
+ Methods:
+ push_front()
+ push_back()
+ 
+ 3. list - Doubly linked list implementation
+ Methods:
+ push_back()
+ push_front()
+ list.insert(itr, 8)
+ list.erase(itr)
+ mylist1.splice(itr, mylist2, itra, itrb)
+ 
+ 
+II. Associative container - always sorted 
+ 1. set - (BST - AVL implementation i think) No Duplicates!
+ Methods:
+ insert - log time - returns pair<iterator, bool> - pair.first
+ insert(itr, 9) - where itr is the hint
+ find - log time
+ erase(val/itr)
+ 
+ * set seems good for keeping sorted array as numbers are coming and going
+ 
+ 2. multiset - same as set but redundant vals allowed
+ * dereference to iterators are read-only
+ 
+ 3. map

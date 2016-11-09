@@ -1,0 +1,6 @@
+Objects
+
+Properties - Belong to the objects
+Any procedure would need to operate on these properties. These properties may change.
+
+Methods - A procedure or a sequence of steps that uses the object's properties to produce something new. They can be also viewed as implementation of interfaces(dependent on scope i.e. where you are interfacing from).
