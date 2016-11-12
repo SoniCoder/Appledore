@@ -1,0 +1,1 @@
+string's find returns string::npos if no match is found

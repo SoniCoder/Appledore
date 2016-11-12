@@ -1,0 +1,3 @@
+z shell
+power fonts
+screenfetch

@@ -1,0 +1,12 @@
+* Grid Like
+
+Desgin
+
+1. Use IS to find the span-depth ration to get started with a depth.
+2. Find factored load i.e. 1.5*(Dead + live) .... Dead = 25*1*d
+3. Use ly and lx to find alphax, alphay, Mx, My. (for both directions and both spans - mid and cont)
+4. Find maximum shear force acting in either direction Vu = w * (lx/2)
+5. Use the Max M out of this same way as for beam design and find an appropriate depth, basically this is the minimum depth for the concrete to sustain the moment.
+6. Get touc-c then tou-c-max then finally tou-v using tou-v = V/bd
+7. Steel Determination:
+   Same as for 3 we have to get 4 values using the same way as for beams using the M values calculated in 3.

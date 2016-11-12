@@ -1,0 +1,6 @@
+f(x) = L0 * f(x0) + L1 * f(x1) + L2 * f(x2) + .....
+
+Now we choose L's such that they become zero for others but 1 for that terms
+For example,
+
+L0 = ((x-x1)(x-x2))/((x0-x1)(x0-x2))

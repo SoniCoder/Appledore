@@ -1,0 +1,1 @@
+Give it begin() and end() iterators and it will replacing stuff giving next permutation
