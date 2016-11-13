@@ -1,0 +1,6 @@
+A way to solve reccurences
+
+
+Not analyzed
+- To prove combinatorial identities 
+- To study properties of sequence

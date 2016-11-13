@@ -1,0 +1,1 @@
+Solving a recurrence basically means to get the final nth output after the "recurrence function" is applied on the input n times.

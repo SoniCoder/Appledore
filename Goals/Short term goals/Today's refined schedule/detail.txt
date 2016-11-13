@@ -1,3 +1,0 @@
-clean room
-code <until> milind bir
-code <until> :pre-sleep:

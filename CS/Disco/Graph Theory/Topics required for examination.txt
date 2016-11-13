@@ -1,0 +1,3 @@
+*  In unordered graph –loop counted twice & every other edge once 
+
+Min<Max> degree – delta<Capital>(G)

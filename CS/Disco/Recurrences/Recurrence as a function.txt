@@ -1,0 +1,5 @@
+You start with something (base case)
+
+There is a function which takes some input and produces first output
+
+Now the same function is applied to the output to produce another output
