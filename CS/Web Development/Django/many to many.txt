@@ -1,0 +1,33 @@
+Creating Instances
+
+new_publication = a2.publications.create(title='Highlights for Children')
+
+Show all foreign key relations for an entry
+
+a1.publications.all()
+
+Ways of querying using the foreign key as filter
+
+Intermediary Models
+
+class A(models.Model):
+    name = models.CharField(max_length=200)
+
+class B(models.Model):
+    a = models.ManyToManyField(A, through='C')
+    ...
+
+class C(models.Model):
+    a = models.ForeignKey(A)
+    b = models.ForeignKey(B)
+
+
+Use related_name whenever multiple ManyToMany fields follow the same model
+
+types = models.ManyToManyField('RelationshipType', blank=True,
+                                   related_name='contact_relationships')
+
+But this requires the referred field to be asymmetrical
+
+contacts = models.ManyToManyField('self', through='ContactRelationship',
+                                      symmetrical=False)

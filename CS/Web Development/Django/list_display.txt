@@ -1,0 +1,28 @@
+Custom Function to use for list_display
+
+
+ def colored_name(self):
+        return format_html(
+            '<span style="color: #{};">{} {}</span>',
+            self.color_code,
+            self.first_name,
+            self.last_name,
+        )
+
+list_display = ('first_name', 'last_name', 'colored_name')
+
+
+Declaring a function returning boolean
+
+def born_in_fifties(self):
+        return self.birthday.strftime('%Y')[:3] == '195'
+    born_in_fifties.boolean = True
+
+Settting up a function to support sorting
+
+ colored_first_name.admin_order_field = 'first_name'
+
+Change page on clicks
+
+list_display_links = ('first_name', 'last_name')
+list_display_links = None

@@ -1,0 +1,4 @@
+git checkout -b "branch name"
+
+
+For merging, checkout master and type git merge "branch name"

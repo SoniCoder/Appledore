@@ -1,0 +1,2 @@
+to_person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name="friends")
+    from_person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name="from_friends")
