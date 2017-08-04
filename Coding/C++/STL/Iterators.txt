@@ -1,0 +1,28 @@
+Random Access Iterators
+
+itr +- c
+
+* Also reverse_iterator, rbegin(), rend()
+
+Bi-directional - set, map, list
+
+Forward Iterator - forward_list
+
+Input(Readable)/Output(Writable) Iterable
+
+* Every container has iterator, const_iterator
+
+advance(itr, 5);
+distance(itr1, itr2);
+
+
+Iterator Adaptor
+
+1. Insert Iterators
+	insert_iteratpr<<vector<int>> i_itr(vec2, it);
+	copy(vec1.begin(), vec2.end(), i_itr);
+	Similar back_insert_iterator, front_insert_iterator
+	
+2.	Stream Iterator	
+	copy(istream_iterator<string>(cin), istream_iterator<string>(), back_inserter(vec4));
+	copy(vec4.begin(), vec4.end(), ostream_iterator<string>(cout, " ");

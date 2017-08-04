@@ -1,0 +1,1 @@
+* Use pre-increment ++x if possible since its faster as you don't need to return the old vslue

@@ -1,0 +1,12 @@
+Can be useful but what about if the filter field has too many values?
+
+class CustomerAdmin(admin.ModelAdmin):
+list_display = ('first_name', 'last_name', 'email', 'state')
+list_filter = ('state',)
+search_fields = ('first_name', 'last_name', 'email')
+
+def state(self, obj):
+    address = Address.objects.filter(owner=obj.id)
+    if address:
+        return address.state
+return None

@@ -1,0 +1,6 @@
+* Is degree sequence enough to prove isomorphism
+Ans. No i found a counter-example.
+
+We only need to try to match the same degree vertices for checking isomorphism. 
+
+If two graphs are isomorphic, their respective sub-graphs formed by same degree vertices are also isomorephic.

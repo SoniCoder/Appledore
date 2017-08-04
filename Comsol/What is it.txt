@@ -1,0 +1,1 @@
+A tool for simultating real life processes. It has bunch of physics(models) in it to choose from.

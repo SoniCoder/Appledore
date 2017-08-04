@@ -1,0 +1,3 @@
+if(cin) //for checking if cin is in a good state to retrieve from
+
+cin.peek('\n') //peek the next character without retrieving it

@@ -1,0 +1,1 @@
+Karb Rabin - String Matching Algorithm - rolls over the huge string and continuously trying to match hash

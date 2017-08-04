@@ -1,0 +1,2 @@
+When a total ordering exists on a set, the permutations of the set can be divided in two classes.
+One of them is of odd parity and other is even.  When x < y and in permutation x occus after y, we consider it as an odd case. If another such odd case occurs, the parity is now even and so on.

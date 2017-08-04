@@ -1,0 +1,18 @@
+class AuthorAdmin(admin.ModelAdmin):
+    fields = ('name', 'title', 'view_birth_date')
+
+    def view_birth_date(self, obj):
+        return obj.birth_date
+
+    view_birth_date.empty_value_display = '???'
+
+Can also be used like actions
+
+class ArticleAdmin(admin.ModelAdmin):
+    ...
+
+    actions = ['make_published']
+
+    def make_published(self, request, queryset):
+        queryset.update(status='p')
+    make_published.short_description = "Mark selected stories as published"

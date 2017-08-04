@@ -10,7 +10,7 @@ Its like interrupts, situation should decide what should be the criteria for int
 
 ->Impossible Tasks
 
-Every kind of processing, including learning takes times. There is most likely
+Every kind of processing, including learning takes time. There is most likely
 going lowed bound on the time needed for some task given some set of skills (atleast a probability based model), so if time left is less than this lower bound, then the task becomes an impossible one.
 
 -> Equivalence of people (An implication of fairness as in probabilistic mathematics)

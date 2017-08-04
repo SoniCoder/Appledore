@@ -1,4 +1,4 @@
-How the architecture of World is organized - 
+How the architecture of World may be organized - 
 {
 	A computer that runs the main function of multiple objects in parallel.
 	Naming these objects - <Quanto>

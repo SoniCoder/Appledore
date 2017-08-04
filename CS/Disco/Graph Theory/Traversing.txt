@@ -1,0 +1,5 @@
+Euler Circuit - Traverse all edges but every edge exactly once
+
+Hamiltonian Circuit - Traverse all vertices without traversing more than once.
+
+Euler Circuit <=> Even degree on each vertex (Figure out reverse implication)

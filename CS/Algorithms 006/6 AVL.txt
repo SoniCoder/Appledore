@@ -1,0 +1,5 @@
+AVL - Balanced BSTs
+
+Non existing children with heigth -1
+
+H(n) = max(H(left), H(right)) + 1

@@ -1,0 +1,18 @@
+Steps to build the model and simulate
+
+* Select Space Dimensions Required
+
+* Select Appropriate Physics
+
+* Global Definitions (Works like global constants)
+
+1. Define Geometry
+	Operators:
+		Boolean:
+			Union/Intersection
+			Difference
+		Transforms:
+			Scale
+		Array
+2. Material Selection
+3. Mesh (Breaking the geometry into parts)

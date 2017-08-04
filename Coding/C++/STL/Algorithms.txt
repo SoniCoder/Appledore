@@ -1,0 +1,7 @@
+min_element - Returns iterator
+
+sort(itr1, itr2);
+
+reverse(itr, vec.end());
+
+copy(itr1, itr2, itr3);

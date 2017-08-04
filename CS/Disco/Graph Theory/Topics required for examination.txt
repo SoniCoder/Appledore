@@ -1,3 +1,9 @@
 *  In unordered graph –loop counted twice & every other edge once 
 
 Min<Max> degree – delta<Capital>(G)
+
+Sum of degrees of vertices is even
+
+This implies number of odd vertices is even vodd + veven + vodd +...... vodd = 2X => Sig(vodd) = Even which is possible only if all v's are paired.
+
+Bipartite Graphs - Vertices partitioned into two categories. In each category, no two vertices are related. [Theorem] A simple graph is bipartite iffit is possible to assign one of two different colors to each vertex so that no two adjacent vertices are assigned the same color. 

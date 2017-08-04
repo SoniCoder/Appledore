@@ -1,5 +1,7 @@
 Common interface for containers
 size(), Copy Constructor, clear(), swap(cont)
+begin(), end()
+The find() in Associative Container returns end() iterator is element is not found.
 
 I. Sequence
 
@@ -7,6 +9,8 @@ I. Sequence
  Methods:
  size()
  push_back()
+ insert(v1.end(), itr1, itr2);
+ * inserts and removes invalidates pointers (new array allocated and all items tranferred)
  
  2. deque (Like a Deck) - Grows in both directions
  Methods:
@@ -17,6 +21,7 @@ I. Sequence
  Methods:
  push_back()
  push_front()
+ back()/front()
  list.insert(itr, 8)
  list.erase(itr)
  mylist1.splice(itr, mylist2, itra, itrb)
@@ -35,4 +40,21 @@ II. Associative container - always sorted
  2. multiset - same as set but redundant vals allowed
  * dereference to iterators are read-only
  
- 3. map
+ 3. map/multimap
+	map<char, int> myMap;
+	myMap.insert( pair<char, int>('a', 100));
+	mymap.insert (make_pair('z', 200));
+	
+ 4. unordered_set/unordered multiset / unordered multimap
+ Methods:
+ find()
+ load_factor() - total_elements/buckets
+ bucket(x)
+ bucket_count()
+ 
+ map and unordered_map also works as associative array
+ day['S']
+ day.at('S')
+ * Insert cannot be used to modify existing element
+ * But subscript operator can be used day['S'] = "xxx"
+ 

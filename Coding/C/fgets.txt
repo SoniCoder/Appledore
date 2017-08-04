@@ -1,0 +1,1 @@
+* fgets reads a line string including the newline character and eof if its there
