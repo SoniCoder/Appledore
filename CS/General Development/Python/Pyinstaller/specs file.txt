@@ -1,0 +1,3 @@
+pyi-makespec options name.py [other scripts ...]
+
+pyinstaller options name.spec

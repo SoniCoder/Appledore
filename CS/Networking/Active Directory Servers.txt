@@ -1,0 +1,15 @@
+Where is the Server?
+
+I will provide it username and password somehow
+
+It returns access control key (TELLS PERMISSIONS)
+
+---------------------------------------------------------
+
+Active Directory provided by Domain Controllers
+
+I can go to any of these domain controller servers and give it my creds and get access control key
+
+
+Samba server works like these domain controllers
+
