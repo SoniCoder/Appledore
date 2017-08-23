@@ -1,0 +1,10 @@
+search samba
+
+use auxiliary/..../
+
+info
+show options
+set RHOSTS IP
+run
+
+For exploits, "exploit" instead of run
