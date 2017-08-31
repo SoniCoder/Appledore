@@ -1,0 +1,3 @@
+Implicit Two way Transitive trusts
+
+Permissions are not copied in case of trusts
