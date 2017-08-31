@@ -1,0 +1,8 @@
+www.vpnbook.com
+
+OpenVPN (ovpnfiles)
+
+All bundles include UDP53, UDP 25000, TCP 80, TCP 443 profile
+Username: vpnbook
+Password: he2qv5h
+

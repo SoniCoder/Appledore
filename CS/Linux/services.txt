@@ -1,0 +1,2 @@
+service tor start/stop/status
+service network-manager restart

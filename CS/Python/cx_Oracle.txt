@@ -1,0 +1,13 @@
+import cx_Oracle
+
+con = cx_Oracle.connect('system/manager@127.0.0.1/O12CR102')
+
+con = cx_Oracle.connect('system', 'manager', '127.0.0.1:1521/O12CR102')
+
+import cx_Oracle
+ip = '192.168.0.1'
+port = 1521
+service_name = 'my_service'
+dsn = cx_Oracle.makedsn(ip, port, service_name=service_name)
+
+db = cx_Oracle.connect('user', 'password', dsn)

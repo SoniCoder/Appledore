@@ -1,0 +1,30 @@
+scanme.nmap.org
+
+Example:
+
+-A : For OS Detect, Ver Detect, Script Scan, Traceroute
+
+-iL <inputfilename> : Containing list of ip addresses
+
+-oG : Output in greppable format
+
+-O: For OS detection
+
+nmap -v -A -oG -p 22 scanme.nmap.org
+
+10.0.0-255.1-254
+
+who is <ip> on search engines to get details
+
+Grepping Example:
+
+cat SCAN | grep Up -> Returns full lines on which "Up" matches
+
+awk Doc:
+
+awk -F " " '{print $2}'
+
+-F Field Delimiter
+
+
+* awk and grep read one line at a time

@@ -1,0 +1,13 @@
+ifconfig wlan0 down
+iwconfig wlan0 mode monitor
+ifconfig wlan0 up
+
+airmon-ng check wlan0
+
+kill all interfering processes
+
+Use airodump-ng to start capturing
+
+Use aireplay-ng to deauth... as soon as it re-authenticates we get a handshake captured
+
+Manual channel change - iwconfig wlan0 channel 6

@@ -1,0 +1,10 @@
+fixing wash
+
+/etc/reaver Create the file/directory - directory i think via mkdir
+
+AP rate limiting fix - By looking on net the locking rate and timing reaver
+
+reaver -i wlan0 -b <BSSID> -r 2:60
+2 tries per 60 seconds
+
+Default pins - https://github.com/devttys0/wps

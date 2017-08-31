@@ -1,0 +1,8 @@
+Bruteforce create test keys
+
+crunch 3 5 abcd | aircrack-ng -w -
+
+* The ending hyphen is to read from stdin
+
+* Can be piped to aircrack-ng
+

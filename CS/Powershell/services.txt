@@ -1,0 +1,3 @@
+list all started services:
+
+net start

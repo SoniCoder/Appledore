@@ -1,0 +1,16 @@
+airbase-ng -a MAC --essid "Something" -c 6
+
+
+bridge-utils 
+
+brctl addbr evil
+
+brctl addif evil eth0
+
+bectl addif evil at0
+
+ifconfig evil up
+
+ifconfig at0 0.0.0.0 up
+
+dhclient3 evil

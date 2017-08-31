@@ -1,0 +1,3 @@
+curl ipinfo.io/<ip>
+
+Get info for that ip
