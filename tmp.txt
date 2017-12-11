@@ -1,0 +1,14 @@
+Upgrade Manager
+
+Interface development for automation
+ 
+
+
+The Project was meant to provide further automation to the database migration / upgrade. This Project involved automating all the steps mentioned in the official guide for migration to a single click. The Project would significantly reduce manpower and time and hence provide financial benefit.
+
+ The Project can fall under the following categories: New Product Development, Improvement in the productivity and efficiency of the product & services, Automation.
+
+ The Project Upgrade Manager was accompanied by two more projects but it was the major one since it involved around 2000 lines of code and maybe as high as 2500 lines if you include documentation. The whole procedure was automated via. the power of Python and PyQt5. It involved some advanced python that used multi-threaded signalling, etc. The learning was immense and projects like this will be a piece of cake. 
+
+
+ The Project is aimed to provide financial benefits to the organization since it involves automatic with an easy to use interface that even a kid can perform migration.
