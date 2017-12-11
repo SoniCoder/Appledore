@@ -1,0 +1,109 @@
+impdp <username>/<password> directory=<directoryname> dumpfile=<filename>.dmp logfile=<filename>.log full=y;
+
+---------------------------------------------------------------------------------------------------------------
+
+ SQL> select * from dba_directories;
+... and if not, create one
+
+  SQL> create directory DATA_PUMP_DIR as '/oracle/dumps';
+  SQL> grant all on directory DATA_PUMP_DIR to myuser;    -- DBAs dont need this grant
+Assuming you can connect as the SYSTEM user, or another DBA, you can export any schema like so, to the default directory:
+
+ $ expdp system/manager schemas=user1 dumpfile=user1.dpdmp
+Or specifying a specific directory, add directory=<directory name>:
+
+ C:\> expdp system/manager schemas=user1 dumpfile=user1.dpdmp directory=DUMPDIR
+With older export utility, you can export to your working directory, and even on a client machine that is remote from the server, using:
+
+ $ exp system/manager owner=user1 file=user1.dmp
+Make sure the export is done in the correct charset. If you haven't setup your environment, the Oracle client charset may not match the DB charset, and Oracle will do charset conversion, which may not be what you want. You'll see a warning, if so, then you'll want to repeat the export after setting NLS_LANG environment variable so the client charset matches the database charset. This will cause Oracle to skip charset conversion.
+
+Example for American UTF8 (UNIX):
+
+ $ export NLS_LANG=AMERICAN_AMERICA.AL32UTF8
+Windows uses SET, example using Japanese UTF8:
+
+ C:\> set NLS_LANG=Japanese_Japan.AL32UTF8
+
+------------------------------------------------------------------------------------------------------------------
+C:\app\Administrator\OraHome_1\BIN>sqlplus sys as sysdba;
+
+SQL*Plus: Release 11.1.0.7.0 - Production on Tue Jan 10 17:28:47 2012
+
+Copyright (c) 1982, 2008, Oracle.  All rights reserved.
+
+Enter password:
+
+Connected to:
+Oracle Database 11g Enterprise Edition Release 11.1.0.7.0 - Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+
+SQL> drop user yumani cascade;
+
+User dropped.
+
+SQL> Create user yumani identified by yumani account unlock;
+
+User created.
+
+SQL> grant create session, dba to yumani;
+
+Grant succeeded.
+
+SQL> grant connect to yumani;
+
+Grant succeeded.
+
+SQL> exit
+
+2.  Fill in your database with data.
+
+3. Next, lets create a database dump.
+$ expdp yumani/yumani schemas=yumani dumpfile=yumani100112_1657.dmp
+An oracle dump with the name yumani100112_1657.dmp will be created in the location that you ran the above command.
+
+4. After backing-up if you need to restore the dump, do as below.
+$ impdp yumani/yumani schemas=yumani dumpfile=YUMANI100112_1640.DMP
+
+---------------------------------------------------------------------------------------------------------------
+
+Experimental
+
+drop user "USER" cascade;
+DROP TABLESPACE "USER";
+
+CREATE TABLESPACE USER DATAFILE 'D:\ORA_DATA\ORA10\USER.ORA' SIZE 10M REUSE 
+    AUTOEXTEND 
+    ON NEXT  5M  EXTENT MANAGEMENT LOCAL 
+    SEGMENT SPACE MANAGEMENT  AUTO
+/ 
+
+CREATE  TEMPORARY TABLESPACE "USER_TEMP" TEMPFILE 
+    'D:\ORA_DATA\ORA10\USER_TEMP.ORA' SIZE 10M REUSE AUTOEXTEND
+    ON NEXT  5M  EXTENT MANAGEMENT LOCAL 
+    UNIFORM SIZE 1M    
+/
+
+CREATE USER "USER"  PROFILE "DEFAULT" 
+    IDENTIFIED BY "user_password" DEFAULT TABLESPACE "USER" 
+    TEMPORARY TABLESPACE "USER_TEMP" 
+/    
+
+alter user USER quota unlimited on "USER";
+
+GRANT CREATE PROCEDURE TO "USER";
+GRANT CREATE PUBLIC SYNONYM TO "USER";
+GRANT CREATE SEQUENCE TO "USER";
+GRANT CREATE SNAPSHOT TO "USER";
+GRANT CREATE SYNONYM TO "USER";
+GRANT CREATE TABLE TO "USER";
+GRANT CREATE TRIGGER TO "USER";
+GRANT CREATE VIEW TO "USER";
+GRANT "CONNECT" TO "USER";
+GRANT SELECT ANY DICTIONARY to "USER";
+GRANT CREATE TYPE TO "USER";
+
+SQLPLUS SYSTEM/systempassword@ORA_alias @"crate_drop_user.SQL"
+IMP SYSTEM/systempassword@ORA_alias FILE=user.DMP FROMUSER=user TOUSER=user GRANTS=Y log =user.log
+
+---------------------------------------------------------------------------------------------------------------------------------------
