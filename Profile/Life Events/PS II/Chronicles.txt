@@ -1,0 +1,22 @@
+Chronicles
+
+f2014480@pilani.bits-pilani.ac.in
+Hritik Soni
+2014A2PS0480P
+JDA Software, Bangalore
+Mr. Vineet Garg
+
+3 Automation Projects were completed which were aimed to help the organization financially by reducing time spent on activities and effort required. The first Project was - Automated Log Analyzer, a tool to automatically read live oracle alert logs and make meaningful sense of information by plotting histograms which are sent by mail. The second Project was - JDA Server Manager, a centralized web interface for storing information on JDA customer for easy and organized access. The third Project, also the biggest one was - Upgrade Manager, a one-click solution for JDA migration procedure with automated error handling.
+
+Python, PyQt5, Django, HTML5, CSS, JavaScript
+
+Automating Tasks for saving time and effort
+
+All 3 Projects were successful and tested on dev environment. Once used they are guaranteed to save time.
+
+Rapid GUI Development, Python Expertise, Web Development Experience, Interface Design, Multi-threaded Programming
+
+JDA is the best organization I've every imagined culture-wise. There is no stress from anyone but ample opportunities to prove yourself, learn and be helpful to the organization. The company doesn't want you to necessarily do anything big but if you do something huge, then you will be appraised by every single person you encounter.
+
+Data Structures and Algorithms, Operating Systems, Computer Networking, Object Oriented Programming, Databases
+
