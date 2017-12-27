@@ -1,0 +1,48 @@
+For: Directed Graph
+
+Does: 
+Checks if graph is strongly connected and returns strongly connected components.
+Also sees if its connected at all.
+
+Definition of Strongly Connected:
+
+In a strongly connected component, you can reach from any node to any other node
+
+
+Requires: 1x Stack, 1x Set for storing visited nodes
+
+How to:
+
+
+Consider any graph with nodes - A, B, C, D, E, F, G
+
+CDE means the component C, D, E is strongly connected
+
+Let's say the output looks like:
+
+ABC -> DE -> F -> G
+
+Here ABC is strongly connected, so is DE and so on.
+
+now there can be no path from lets say D to B or A because if there were,
+D would also be included inside strongly connected component ABC.
+
+
+The above suggests a toplogical ordering.
+
+So if you apply topological ordering and store it inside stack,
+We might get something like this...
+
+
+A ->C -> B -> D -> ......
+
+
+Now we need to somehow check if we can go from B to A
+i.e. we want to check if B -> A exists.
+
+If we reverse all edges and apply DFS on A we can find everybody who can reach A.
+
+and since we know that D or E will never reach A, doing this DFS will give us the first strongly connected component.
+
+
+Repeating this process will give all strongly connected components. Just keep popping the ones already counted from the stack.

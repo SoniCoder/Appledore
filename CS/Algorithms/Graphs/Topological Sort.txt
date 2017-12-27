@@ -1,0 +1,15 @@
+For: Acyclic - Directed Graphs
+
+Does: Ordering everynode as per the directed Graphs
+
+Required DS - 1x Set 1x Stack
+->Set for Marking Nodes as Visited
+->Stack will contain the ordering
+
+Brief Algo:
+Keep exploring from any node (DFS type) and add a particular node to the stack only when it has no more unexplored nodes in it.
+After finishing exploring a node, mark it as visited.
+
+Space and Time Complexity
+
+O(V + E) - Doing DFS like traversing mostly

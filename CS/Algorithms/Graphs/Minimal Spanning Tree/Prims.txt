@@ -1,0 +1,21 @@
+For: Undirected Weighted Graph
+
+Does: Outputs Minimal Spanning Tree
+
+Requires: Heap, 1 Extra Empty Graph for Tree, Set (For marking visited Nodes)
+
+
+
+How to:
+
+->  We can start with any node and call it root.
+->  Every other node will be a child of someone and will be a greedy one for minimum dist with its parent. So it will change its parent.
+
+1. Initialize heap with root node (0, srcnode)
+2. Start popping from the heap and mark it visited so it won't be popped again.
+3. Explore every child of the popped node and for each child check whether it could be a "Better" parent. If so do the change in the second graph.
+4. Also add these children to the heap which have not been marked visited so that they can be popped.
+
+Space Complexity = O(V+E)
+
+Time Complexity = O(ElogV) because every new edge may try to mess up heap

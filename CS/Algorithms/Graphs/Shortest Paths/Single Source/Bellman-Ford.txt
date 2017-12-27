@@ -1,0 +1,32 @@
+For: Directed Graph with Arbitrary Edges
+
+Does: Minimum Distances to all vertices from single source and also detects negative weight cycle 
+
+Required: Distance List (Initialized to infinity)
+
+How to:
+
+-> Initialize distance list to infinity except for src vertex where value is 0.
+
+Consider graph like this -
+
+
+1 _ 2 _ 3
+|   |
+4   5
+    |
+    6
+
+1. For every edge x -> y
+2. Relax 1 -> y using 1 -> y > 1 -> x + x -> y.
+
+Reason it works is because using it once connects 1 and all nodes that are 1 edge apart.
+Using once more will connect nodes 2 edges apart.
+
+Since max edges will be n - 1 we need to repeat it n - 1 times.
+
+If upon repeating once more reduces any of the distances, a negative weight cycle is detected.
+
+Space Complexity - O(V + E)
+
+Time Complexity - O(E * V)

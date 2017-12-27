@@ -1,0 +1,22 @@
+For: Undirected Weighted Graph
+
+Does: Outputs a spanning tree with minimum total weight of edges. 
+
+Requires: Disjoint Set DS
+
+How to:
+
+1. Make disjoint sets for all nodes.
+2. Sort all edges.
+3. One by one, inspect each edge and see if the two vertices are in same set.
+4. If they are, then ignore otherwise store that edge and do makeunion on the two sets.
+
+
+
+Space Complexity
+
+O(E + V) - Storing Edges and Disjoint sets
+
+Time Complexity
+
+O(ElogE) - Mostly comes from sorting edges

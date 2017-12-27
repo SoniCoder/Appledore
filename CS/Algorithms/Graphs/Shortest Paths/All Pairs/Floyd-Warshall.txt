@@ -1,0 +1,32 @@
+For: Directed Graph with Arbitrary Edges
+
+Does: Finds shortest distances from all vertices to all other vertices while also detecting negative weight cycles.
+
+How to:
+
+Consider graph like this -
+
+
+1 _ 2 _ 3
+|   |
+4   5
+    |
+    6
+
+If you directly connect the vertices that say 1 is indirectly connecting...
+
+For example 4 -> 1 -> 2, apply relaxation for vertices 4 -> 2 and do this for all vertices, in the end everyone will know min-dist to everyone else.
+
+Consider the problem as:
+
+Indirect connections from any vertex to any another vertex via combinations of {1, 2, 3, 4, 5}.
+
+If you connect every vertex around {1} directly, now indirect connections will be lesser and there will be none at the end.
+
+Space Complexity:
+
+Since you need to store outputs from every vertex to every other - O(V^2)
+
+Time Complexity:
+
+Since we are trying to connect n^2 pairs via each node - O(V^3)

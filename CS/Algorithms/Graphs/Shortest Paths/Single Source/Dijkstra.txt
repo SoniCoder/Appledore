@@ -1,0 +1,23 @@
+For: Directed and Undirected Graphs
+
+Required DS: 1x Heap, 1x Distance List, Node
+
+How to:
+
+1.  Intialize all distances to infinity. 
+2.  Put source vertex in empty heap like (0, srcnode)
+3.  Now keep popping from the heap until its empty and whenever popped, do as follows:
+
+-> Push all nodes to the heap adjacent to the popped node whose dist is inf.
+-> Mark the popped node as the parent of these nodes.
+-> Update the dist list of the popped node. 
+
+Space Complexity - O(E + V)
+
+
+Time Complexity
+
+-> Heap Worst Case Size
+-> Every New Edge Encounter messes with Heap
+
+O(ELogV)
