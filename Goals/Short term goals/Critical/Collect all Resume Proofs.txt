@@ -1,6 +1,0 @@
-1. 10/12 Marksheet
-2. Python Certificate
-3. JMRC certificate
-4. JDA certificate for joining
-5. 3 Projects' Certi in JDA
-6. POR in JDA for developing, deploying and maintaining Upgrade Manager.
