@@ -1,0 +1,30 @@
+Algorithm Name: Ford Fulkerson - Edmonds Karp
+
+For: Directed Weighted Graph / Pipeline Network with given capacities of pipes
+
+Does: Finds maximum possible flow from source vertex to destination vertex as per given capacities.
+
+Requires: BFS related DS on the graph
+
+How to:
+
+Consider graph with vertices A, B, C, D, E, F, G with source vertex A and destination vertex G
+
+Running BFS will make us meet G. 
+We can inspect the edges we encountered in the path and see which one has the least remaining capacity.
+Add this capacity to maxflow and reduce residual capacities in the path by this amount.
+Also increase residual capacities for backward edges by this amount as well.
+
+Terminology:
+
+Capacity - Max amount of flow that can occur in a pipe if it was empty initially.
+
+Residual Capacity - Flow that can be added to current flow so it can achieve the max flow.
+
+Time Complexity:
+
+Using BFS - O(E^2 * V)
+
+Space Complexity:
+
+O(V+E) - For BFS

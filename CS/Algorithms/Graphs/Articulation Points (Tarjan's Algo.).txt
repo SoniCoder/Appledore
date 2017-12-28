@@ -1,0 +1,24 @@
+For: Undirected Graph
+
+Does: Detects Articulation Points
+
+Terminology:
+
+1. Articulation Point: Removing this point disconnects the Graph
+
+Required: 1x Set for marking nodes visited, DFS
+
+How to:
+
+1. Start with any vertex, call it root.
+2. Maintain two values for each node - i. Visited Time ii. Low Time
+3. For root, these are 0/0
+4. Start DFS from root and increase visited time by 1 as you go deeper.
+5. Also if no low time has been set, keep it same as visited time.
+6. If a node finds a neighbour which has lower visited time than itself (except its parent),
+give that node the same low time as the found node.
+7. Once a parent finishes exploring a child, check whether its visited time is less than the child's low time.
+8. If yes, then that parent node is an articulation point.
+9. Finally to check the root node, whether it's A.P. check whether its child subgraphs are connected or not.
+
+Complexities: Same as DFS

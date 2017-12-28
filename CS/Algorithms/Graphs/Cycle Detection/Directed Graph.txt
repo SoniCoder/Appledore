@@ -1,0 +1,15 @@
+For:    Directed Graph
+
+Does:   Detects any cycle
+
+How to:
+
+Upon running DFS from any node, mark those which are being explored.
+i.e. As soon as you start exploring a node mark it and only unmark it after no more children are left to explore.
+
+
+Now while exploring any node, if you find any marked node then it means a cycle is present.
+
+This works because if a node is marked, it means it's children or grandchildren, etc. are still being explored.
+
+Complexities: Same as DFS

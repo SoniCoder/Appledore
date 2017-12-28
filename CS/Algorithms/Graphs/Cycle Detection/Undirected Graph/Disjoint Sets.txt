@@ -1,0 +1,15 @@
+For: Undirected Graph
+
+Does: Detects Cycle
+
+Requires: Disjoint Sets
+
+How to:
+
+1. Call makeset on every node
+2. For each edge union corresponding sets.
+3. If the two nodes of an edge belongs to the same set, means a cycle is detected.
+
+Complexity:
+
+T = S = O(V + E)

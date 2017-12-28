@@ -1,0 +1,26 @@
+For: Directed Graphs
+
+Does: Finds all Simple Cycles
+
+Terminology:
+
+Simple Cycle: Cycle where no node is repeated twice
+
+Requires: 1x Stack for DFS, 1x Set for DFS and marking blocked, 1x map (Blocked map)
+
+How to:
+
+1. Use Strongly Connected Components Algo. to seperate components that cannot have cycles with each other.
+2. Start with any vertex and we will look for any cycles to it via DFS.
+3. Keep marking everything blocked as you go so you don't come to it again. (Since we are looking for simple cycles)
+4. Upon reaching dead end use the block map to tell the parent to unblock it as well whenever a cycle is found.
+5. As soon as you find a cycle, add it and unblock as much as you can while still looking for more cycles.
+6. Also recursively unblock children too.
+
+Complexities:
+
+Space - O(V + E)
+
+Time - O((V+E)*Cycles)
+
+Since for every DFS you get one cycle.
