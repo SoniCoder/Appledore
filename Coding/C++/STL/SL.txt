@@ -1,8 +1,0 @@
-STL
-
-Algorithms - Iterators - Containers
-
-Iterators [begin, end)
-
-Example:
-Sorting(An algorithm which can work on multiple types of containers). 

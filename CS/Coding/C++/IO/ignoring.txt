@@ -1,0 +1,9 @@
+cin will skip empty spaces and returns .... it will keep them in input buffer if it hasn't crossed it
+
+To fix this use ignoring:
+
+#include<limits>
+
+std::cin.ignore(std::numeric_limits<streamsize>::max(),'\n');
+cin.ignore() For ignoring 1 character
+

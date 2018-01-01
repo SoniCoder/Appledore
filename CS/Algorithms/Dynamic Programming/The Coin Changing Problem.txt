@@ -1,0 +1,25 @@
+For: Denominations and a total Target
+
+Does: Outputs distinct ways of making the target using infinite multiples of given Denominations
+
+How to:
+
+Coins - 2 3 
+Target - 5
+
+Consider you have no Denominations available
+
+        0, 1, 2, 3, 4, 5
+Ways = [1, 0, 0, 0, 0, 0]
+
+Now you have denominations of 2 
+
+        0, 1, 2, 3, 4, 5
+Ways = [1, 0, 1, 0, 1, 0]
+
+i.e. Ways[x] += Ways[x-2] for x >= 2
+
+Now you get 5 as well
+
+        0, 1, 2, 3, 4, 5
+Ways = [1, 0, 1, 1, 1, 1]

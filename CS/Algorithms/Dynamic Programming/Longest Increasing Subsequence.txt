@@ -1,0 +1,22 @@
+For: Sequence with total ordering
+
+Does: Finds maximum length subsequence in order
+
+How to:
+
+Take:
+
+        3  4 -1  0  6  2  3
+
+Consider them one by one, like only 3 and then involve 4 etc.
+
+3       1  1  1  1  1  1  1
+3+4     1  2  1  1  1  1  1
++ -1    1  2  1  1  1  1  1
++ 0     1  2  1  2  1  1  1
++ 6     1  2  1  2  2  1  1
+                    3  1  1
++ 2                    3  1
++ 3                       4
+
+Complexity -  O(n^2)

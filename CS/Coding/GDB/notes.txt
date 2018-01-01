@@ -1,0 +1,21 @@
+start - starts program
+list - prints nearby code
+l 12
+step - step into mode
+next - step over (jump)
+print a
+x var1 - examines 4 byte value over and over
+x/b - 1 byte
+x &int1
+watch i - inform whenever value changes
+rwatch i - inform whenever read
+continue
+break 13
+break main
+b file1:14
+info break watch
+delete 12
+bt backtracks - see how you got there
+gdb shows before inst. is executed
+set var sum = 23
+info locals

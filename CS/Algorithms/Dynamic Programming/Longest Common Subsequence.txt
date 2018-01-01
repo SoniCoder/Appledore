@@ -1,0 +1,43 @@
+For: 2 strings
+
+Does: Find the longest common subsequence among the strings
+
+Terminology:
+
+Subsequence - Sequence of characters in a string not necessarily consecutive but must maintain order
+
+How to:
+
+Consider two strings -
+
+A: abcdef
+B: acbcef
+
+Recursive solution is easy to see:
+
+If first character matches then recurse(A[1:], B[1:]).
+
+If it doesn't match then recurse on max((A[1:], B[:]), (A[:], B[1:])).
+
+Use DP to minimize time.
+
+A: ['', 'a', 'b', 'c', 'd', 'e', 'f']
+B: ['', 'a', 'c', 'b', 'c', 'e', 'f']
+
+We have to make MAXSUB[x, y]
+Where x is the index upto which we are considering A and similar for y.
+In this case x = 5
+
+Base Cases:
+DP[-1, -1] = 0
+DP[-1, x] = 0
+DP[x, -1] = 0
+
+Now, DP[x, y] = DP[x-1, y-1] + 1, if DP[x] == DP[y]
+                max(DP[x-1, y], DP[x, y-1]) otherwise
+
+Complexity: O(n^2)
+ 
+
+https://practice.geeksforgeeks.org/problems/longest-common-subsequence/0
+

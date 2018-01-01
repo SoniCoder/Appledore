@@ -1,0 +1,88 @@
+For: BST
+
+Does: Balances Tree on Insertion
+
+Requires: BST, height augmentation in Node definition
+
+How to:
+
+NOTE: You don't need a parent pointer in your Node definition
+NOTE: You need to do insertion recursively from root
+
+
+1. Start recursively inserting from root and after every successful insert update height to max of the children + 1.
+2. The left or right pointers may change so correct roots need to be returned.
+3. After insertion is done the code will go back to the nodes it came from all the way to root.
+4. Every node check for balance (left height - right height) to see if imbalance is on right on left.
+5. Further check whether its LR or LL , etc.
+6. For LL, on imbalanced node call right rotate.
+7. For LR, first call left rotate on imba's left node then call right rotate on imba node.
+
+Left rotate working:
+
+
+    N0
+    /
+N1
+    \
+    N2
+
+
+Calling left rotate on N1 would being N2 up and N1 down and children rearrangements.
+Calling right rotate on N0 would bring N0 left child up and N0 down and corresponding children shift.
+
+
+private Node leftRotate(Node root){
+    Node newRoot = root.right;
+    root.right = root.right.left;
+    newRoot.left = root;
+    root.height = setHeight(root);
+    root.size = setSize(root);
+    newRoot.height = setHeight(newRoot);
+    newRoot.size = setSize(newRoot);
+    return newRoot;
+}
+
+private Node rightRotate(Node root){
+    Node newRoot = root.left;
+    root.left = root.left.right;
+    newRoot.right = root;
+    root.height = setHeight(root);
+    root.size = setSize(root);
+    newRoot.height = setHeight(newRoot);
+    newRoot.size = setSize(newRoot);
+    return newRoot;
+}
+
+public Node insert(Node root, int data){
+    if(root == null){
+        return Node.newNode(data);
+    }
+    if(root.data <= data){
+        root.right = insert(root.right,data);
+    }
+    else{
+        root.left = insert(root.left,data);
+    }
+    int balance = balance(root.left, root.right);
+    if(balance > 1){
+        if(height(root.left.left) >= height(root.left.right)){
+            root = rightRotate(root);
+        }else{
+            root.left = leftRotate(root.left);
+            root = rightRotate(root);
+        }
+    }else if(balance < -1){
+        if(height(root.right.right) >= height(root.right.left)){
+            root = leftRotate(root);
+        }else{
+            root.right = rightRotate(root.right);
+            root = leftRotate(root);
+        }
+    }
+    else{
+        root.height = setHeight(root);
+        root.size = setSize(root);
+    }
+    return root;
+}

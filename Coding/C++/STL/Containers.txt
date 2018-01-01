@@ -1,6 +1,7 @@
 Common interface for containers
 size(), Copy Constructor, clear(), swap(cont)
 begin(), end()
+empty() - Whether container is empty or not
 The find() in Associative Container returns end() iterator is element is not found.
 
 I. Sequence
@@ -11,7 +12,9 @@ I. Sequence
  push_back()
  insert(v1.end(), itr1, itr2);
  * inserts and removes invalidates pointers (new array allocated and all items tranferred)
- 
+ Initialize vector of vectors: vector<vector<int>> X(n, vector<int>(0, m))
+
+
  2. deque (Like a Deck) - Grows in both directions
  Methods:
  push_front()

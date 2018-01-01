@@ -1,0 +1,22 @@
+Concept - Template (A way of producing variations from a commanality)
+
+* Concise code
+* Type independent code
+
+Function template
+
+template <typename T>
+T square(T x){
+	return x*x;
+}
+
+Usage: 
+square<double>(5.5)
+square(5.5)
+square(5)
+
+Class template - Must specify datatype
+template <typename T>
+class XYZ{
+	T arr[1000];
+}
