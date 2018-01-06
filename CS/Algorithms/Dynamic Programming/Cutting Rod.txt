@@ -1,0 +1,42 @@
+For: Given rod length and prices of various segments which can be solved
+
+Does: Finds optimum way to cut the rod to maximize profit
+
+How to:
+
+Example:
+
+Rod Length = 5
+
+Length  Cost
+1       2
+2       5
+3       7
+4       8
+
+2 Ways to do it
+
+Way 1:
+
+Include varieties one by one.
+Every new variety you can check whether to cut with the new variety or not.
+
+    0  1  2  3  4  5
+1   0  2  4  6  8  10
+2   0  2  5  
+3   0
+4   0
+
+
+Way 2:
+
+Initialize Price List to 0 for all lengths 0 to n
+
+[0, 0, 0, 0, 0, 0]
+
+Now fill these for lengths given.
+
+[0, 2, 5, 7, 8, 0]
+
+Start from left, cut using all possibilities(varieties) and find the max one and store it
+Keep doing it for higher and higher n.

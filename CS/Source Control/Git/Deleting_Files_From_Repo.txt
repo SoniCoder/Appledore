@@ -1,0 +1,8 @@
+A lot of cases are possible.
+
+1.File Not Pushed
+
+	1.1 You want to delete only from the last commit
+		git rm --cached <filename>
+		git commit --amend -CHEAD
+		git push

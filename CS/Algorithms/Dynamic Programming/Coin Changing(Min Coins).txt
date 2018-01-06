@@ -1,0 +1,28 @@
+For: Given a total amount you have to make and a number of denominationsof infinite quantities
+
+Does: Outputs what amount of what denominations you should use to minimize coins required
+
+How to:
+
+Reverse of Cutting Rod Problem
+
+You have to minimize using previous data this tiem.
+
+We have 2 ways -
+1. Include denominations one by one.
+2. Consider all denominations at once and increase n one by one
+
+Initially we have infinite ways of making everything except 0
+
+
+0 inf inf inf inf inf
+
+Lets say we got denomination = 1
+
+Now, current min coins = min(prevcoins, 1+mincoints(total-denomination)
+
+Keep doing it for every value of n from 1 to N and include more denominations once you are finished with one.
+
+Way 2 - is to consider all denomination while making a value like n.
+
+So mincoins = min(currentmin, 1+mincoins[n-denom1], 1+mincoins[n-denom2]), etc.

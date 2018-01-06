@@ -1,0 +1,30 @@
+For: 2 Strings and 2 operations: delete ,convert and insert if all have same cost 
+
+Does: Outputs the minimum number of operations you must do to convert one string to the other
+
+How to:
+
+Looking at substrings we start with 1 null and other complete and gradually increase character to the full length
+
+Now as characters come, either we can convert it or delete it.
+
+In delete case we will take one operation and we can look at side increase because they would be already calculated.
+We will also look at convert case which is the diagonal entry + 1, if its a match the convert case becomes the diagonal value.
+
+Also in case when they are same, we can just take diagonal value without looking for adjacent ones.
+This is because adjancent values will take 1 cost for deletion and to be better than the diagonal one they have to be 2 cost better.
+Now they can never be 2 cost better than their adjancent because you can easily convert to it by just deleting once.
+
+Take the following strings as an example.
+
+abcdef
+azced
+
+            a  b  c  d  e  f
+            1  2  3  4  5  6
+    a   1   0  1  2  3  4  5
+    b   2   1  1  2
+    c   3
+    d   4
+    e   5
+    f   6

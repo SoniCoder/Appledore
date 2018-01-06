@@ -1,0 +1,27 @@
+For: Give a number of floors, and some eggs to work with.
+
+Does: Outputs a minimum number of attempts you must do to find at which floor exactly egg starts to break
+
+How to:
+
+Consider 4 floors and 2 eggs.
+With one egg, attempts will be the floor count
+Now, if egg count > floors, the extra egg doesnt help as using one egg reduces number of floors by atleast 1.
+So we will never need eggs more than floor count. So in this case, just call DP[eggs-1, floor]
+
+Now lets say we got 2 eggs and 2 floors
+Now our answer will be min of (attempts by dropping first egg from floor 1, attempts by dropping first egg from floor 2)
+Now if we drop egg from floor 1... If it breaks we are left with 1-1 = 0 floors, this we used only one attempt
+It it doesnt break we are left with 2-1 floors and 2-0 eggs and we know DP[2, 1] = 1. So in worst case we will need 2 attempts if we drop from floor 1
+
+Similarly we will get for dropping it from 2. We take min of them and that will be the answer.
+
+Floor 1 2
+
+We can drop egg from floor 1
+
+
+    0  1  2  3  4
+1   0  1  2  3  4
+2   0  1  2  2  3
+

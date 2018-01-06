@@ -1,0 +1,27 @@
+For: Single Resource,  Multiple Requests with given start and finish time and each request with its weight
+
+Does: Returns which requests to entertain to get maximum total weight or resource usage
+
+How to:
+
+Lets says you have five request
+
+G H K A D F
+
+1 2 4 2 3 2
+
+Now to use DP you need to make a subproblem
+
+For each request we will store the score including that request and every request which can finish before it.
+
+So, first step is to sort all requests as per earliest finish time.
+
+Initialize the array to the corresponsing weights.
+
+[1 2 4 2 3 2]
+
+Now index 1 is not accounting for including index 0.
+So, we check if index 0 clashes with index 1 
+If it doesnt we can include 0 with 1 and check if value[0] + weight[1] > current value[1]
+
+We keep checking all lower indices for a higher index and see if we can pair that higher index with one of those.

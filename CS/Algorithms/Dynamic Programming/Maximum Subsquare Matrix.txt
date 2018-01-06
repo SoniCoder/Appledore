@@ -1,0 +1,21 @@
+For: Given matrix with 0s and Xs
+
+Does: Finds the largest square where all sides are made up of Xs
+
+How to:
+
+Take this example:
+
+0  X  X  X
+0  X  0  X
+X  X  X  X
+0  X  X  X
+
+Our Strategy will be first collect consecutive accumulated values of Xs for each cell for both top and left directions.
+
+After that we can check each cell easily for how big square can we make if we choose it as bottom right corner of the square.
+
+To get accumulated value its simply
+
+If Mat[i][j] == 'X':
+    DP[i][j] = (DP[i-1][j] + 1, DP[i][j-1] + 1)
