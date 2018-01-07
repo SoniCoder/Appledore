@@ -1,0 +1,28 @@
+Disjoint Set doesnt need to be a seperate set.
+
+Just Node class is enough.
+
+Each node has initially parent = None
+
+Once you start giving nodes their parents, disjoint sets are created automatically.
+
+Each Set will have a root as the representative.
+
+There is no requirement for nodes to store their children because they need to have only one parent (Tree like)
+
+Just implement findset as a seperate function which finds the root and can also do path compression.
+
+
+class Node:
+    def __init__(self):
+        self.parent = None
+
+def findset(node, Nodes):
+    lst = []
+    itr = node
+    while(Nodes[itr].parent!=None):
+        lst.append(itr)
+        itr = Nodes[itr].parent
+    for item in lst:
+        Nodes[item].parent = itr
+    return itr

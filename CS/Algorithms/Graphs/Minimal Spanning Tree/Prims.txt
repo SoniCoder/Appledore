@@ -4,17 +4,26 @@ Does: Outputs Minimal Spanning Tree
 
 Requires: Heap, 1 Extra Empty Graph for Tree, Set (For marking visited Nodes)
 
-
-
 How to:
 
 ->  We can start with any node and call it root.
-->  Every other node will be a child of someone and will be a greedy one for minimum dist with its parent. So it will change its parent.
 
-1. Initialize heap with root node (0, srcnode)
-2. Start popping from the heap and mark it visited so it won't be popped again.
-3. Explore every child of the popped node and for each child check whether it could be a "Better" parent. If so do the change in the second graph.
-4. Also add these children to the heap which have not been marked visited so that they can be popped.
+1. Initialize heap with root node (0, NULL, root)
+2. Start popping from the heap and mark it visited so it won't be popped again
+3. After every pop, store the edge, e.g (0, NULL, root) or (2, a, b). 
+4. Explore the children of the pooped and add these to the heap (w, root, a) which have not been marked visited so that they can be popped.
+
+Reason to use heap and why pop edge with minimum dist:
+
+Lets say a is the root
+
+and you found a - b with dist 2
+a - c with dist 3
+b - c with dist 1
+
+Now since a is root of the tree and we haven't discovered b and c, b and c have to be connected to a somehow indirectly or directly
+On one side is a and on other side bc
+If bc is connected in the minimum weight way and you have to choose a - b or a - c to connect everything, which one would you choose?
 
 Space Complexity = O(V+E)
 
