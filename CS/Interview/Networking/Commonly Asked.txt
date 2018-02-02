@@ -1,0 +1,6 @@
+Multiplexing - Dividing a link into multiple channels.
+
+Bandwidth - Range of frequencies which can pass through medium
+
+Data link layer - Carry packets from one hop to the next.
+

@@ -1,0 +1,7 @@
+grep options pattern file
+
+Options
+
+-n Line #
+-c Count of matches
+-v lines which dont='t matches pattern

@@ -1,0 +1,49 @@
+Polymorphism
+
+Different Operations in Different Contexts
+
+Early binding - Compile Time - method overloading
+Late binding - Run Time - virtual functions
+
+
+Design Patterns
+
+Strategy Design Pattern: 
+
+Avoid Code Duplication using Interfaces
+Define family of algorithms and make objects to use whichever they want.
+
+Observer Pattern:
+
+1 Subject(Publisher), Multiple Observers(Subscribers)
+Subject Stores all Observers and calls their update methods
+
+Factory Pattern:
+
+Classes chosen at runtime!
+Method returns class objects depending upon what user wants.
+
+Abstract Factory Pattern:
+
+Abstract all factories but use the concrete one
+
+Abs. Factory -> Abs. Weapon Factory, Abs. Vehicle Factory
+
+Abs. Vehicle Factory -> UFO Factory
+
+Singleton Pattern:
+
+Static Instance inside class of the same class.
+
+Adapter Design Pattern
+
+New class in order to use existing target interface which can't be used directly.
+
+Iterator Pattern
+
+Classes implementing iterable
+Can call createiterator(), Iterator having hasNext, etc.
+
+Composite Pattern
+
+Objects made up of multiple objects and those objects are made up they same way.

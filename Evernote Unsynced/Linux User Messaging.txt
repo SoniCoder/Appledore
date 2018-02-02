@@ -1,0 +1,9 @@
+Target
+mesg y
+mesg n
+
+Source
+write targetuser
+Content
+
+finger - Asterisk on people with messaging disabled

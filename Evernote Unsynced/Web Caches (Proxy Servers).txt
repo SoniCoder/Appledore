@@ -1,0 +1,11 @@
+Servers which sends HTTP request to target server on behalf of someone else.
+
+They usually store the HTTP Response as well for caching purposes for faster access.
+
+HTTP specifications also has supportive operations to ease the process.
+
+=> Client would send a Request to some target server via a proxy server.
+
+=> The Proxy Server would send a HTTP Request mentioning IfModifiedSince Clause in case it already has the object.
+
+=> Finally the proxy server would send the response back to the requesting agent.

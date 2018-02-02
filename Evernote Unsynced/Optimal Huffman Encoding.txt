@@ -1,0 +1,24 @@
+For:  Given alphabet with frequency of each character
+
+Does:  Finds optimal huffman encoding which minimized average bit length
+
+How to:
+
+Consider alphabet
+
+a b c d e
+
+1.  Sort in decreasing order of frequency.
+2.  Start merging character from the right (i.e. with smallest 2 frequencies) and consider their combined frequency corresponding to a single character.
+3.  Repeat this process until only 2 characters are left.
+4.  Assign 0 to one and 1 to other.
+5.  Now expand characters one by one appending 1 or 0 to their parent notation until leaf character is reached.
+
+Implementation:
+
+Optimal Prefix Code (Huffman Encoding) is same as finding optimal binary tree
+
+Note: This is different from Optimal BST since the tree is binary and there is no ordering between the keys.
+
+While combining 2 characters, make a new parent and assign its children to the two characters.
+Keep doing this until root is achieved and then traverse again all the way to the leaves by appending 0 or 1 to the parent notation.

@@ -1,0 +1,12 @@
+Tyoes:
+
+1. Unicast
+
+2. Broadcast
+
+a. Limited
+b. Directed Broadcasting
+
+CA - 1-126
+CB - 128-191
+CC - 192-223

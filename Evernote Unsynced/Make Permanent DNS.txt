@@ -1,0 +1,3 @@
+Add a similar line to /etc/dhcp/dhclient.conf using a root terminal:
+
+supersede domain-name-servers 74.122.198.48, 50.116.23.211;

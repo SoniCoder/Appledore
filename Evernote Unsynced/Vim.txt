@@ -1,0 +1,21 @@
+Config File - .vimrc
+
+Command Mode:
+
+0 - Go to start of line
+$ - Go to end of line
+a - Append mode from current position
+gg - Go to top
+w - Skip to next word
+b - Back word
+gg -> dG - Delete all
+A - Append Mode to end of current line
+G - Go to last line
+V - Select line by line
+
+
+echo $MYVIMRC
+set number/nonumber - show line numbers
+set tabstop=2
+set autoindent
+syntax on

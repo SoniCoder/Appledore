@@ -1,0 +1,30 @@
+Numpy
+
+import numpy as np #Standard Import
+
+nd array
+
+Constructor
+
+Pass - Tuple, List
+
+Instance Vars
+
+dtype - Returns datatype
+ndim - Number of dimensions
+shape - Size of each dimension
+size - # of items
+
+Methods
+
+astype  #TypeCasting
+astype(str)
+mean(axis=0)
+
+Operators
+
+Element-wise
++, *, **
+
+Additional
+=> Iterable

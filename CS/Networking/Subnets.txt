@@ -1,0 +1,2 @@
+Subnet Masks can be different for variable length subnets
+
